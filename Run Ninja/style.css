@@ -1,0 +1,79 @@
+*,::after,::before{
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.world{
+    overflow: hidden;
+    position: relative;
+    border: solid 3px;
+}
+
+.logo{
+    height: 100%;
+    margin-left: 60%;
+}
+.score{
+    position: relative;
+    font-size: 3vmin;
+    text-align: center;
+    left: 1vmin;
+    top: 1vmin;
+    color: white;
+    font-weight: bold;
+}
+
+.start-screen{
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-weight: bold;
+    font-family:monospace;
+}
+
+.hide{
+    display: none;
+}
+
+.ground{
+    --left: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+
+  left: calc(var(--left) * 1%)
+  
+
+}
+
+.player{
+    --bottom:0;
+    position: absolute;
+    left: 1%;
+    max-height: 100px;       
+    bottom: calc(var(--bottom)*1%)
+   
+}
+
+.obstacle{
+    --left: 80;
+    width: 17%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    left: calc(var(--left) * 1%)
+}
